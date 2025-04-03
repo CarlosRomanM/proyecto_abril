@@ -1,4 +1,4 @@
-# PROYECTO ABRIL 
+# Proyecto I - EDA / ETL
 Proyecto "La Huella Ambiental de la Producción de Alimentos: ¿Un Desafío Global?"
 
 ## INTRODUCCIÓN
