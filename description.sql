@@ -17,8 +17,8 @@ SELECT
     SUM(CASE WHEN `Per Capita` IS NULL OR `Per Capita` = '' THEN 1 ELSE 0 END) AS null_per_capita
 FROM GCB2022v27_MtCO2_flat;
 
-/* Contamos los valores nulos (NULL) o vacíos ('') en cada columna.
-Esto nos ayuda a decidir si eliminamos las filas con valores nulos o las reemplazamos con valores predeterminados.
+/* Cuento los valores nulos (NULL) o vacíos ('') en cada columna.
+Esto me ayuda a decidir si eliminamos las filas con valores nulos o las reemplazo con valores predeterminados.
 */
 
 -- 3_Identificar valores no numéricos en columnas numéricas
@@ -33,8 +33,8 @@ WHERE NOT Total GLOB '[0-9]*'
    OR NOT Other GLOB '[0-9]*'
    OR NOT `Per Capita` GLOB '[0-9]*';
 
-/* Buscamos filas donde las columnas numéricas contengan valores no válidos (por ejemplo, texto o caracteres especiales).
-   Esto nos ayuda a identificar datos que necesitan ser limpiados.
+/* Busco filas donde las columnas numéricas contengan valores no válidos (por ejemplo, texto o caracteres especiales).
+   Esto me ayuda a identificar datos que necesitan ser limpiados.
 */
 
 -- 4_Reemplazar valores no numéricos con NULL
@@ -55,7 +55,7 @@ SET Other = NULL WHERE NOT Other GLOB '[0-9]*';
 UPDATE GCB2022v27_MtCO2_flat
 SET `Per Capita` = NULL WHERE NOT `Per Capita` GLOB '[0-9]*';
 
-/* Limpiamos las columnas numéricas reemplazando los valores no válidos con NULL.
+/* Limpio las columnas numéricas reemplazando los valores no válidos con NULL.
 Esto asegura que las columnas contengan solo datos numéricos válidos.
 */
 
@@ -119,7 +119,7 @@ FROM GCB2022v27_MtCO2_flat
 LIMIT 20000;
 
 /* Tenía un conflico en el dataset, ya que me daba problemas porque habia muchas columnas sin valor. 
-   He solucioando este conflico sustituyendo estos valores por "0" y eliminando l as que estaban 
+   He solucioando este conflico sustituyendo estos valores por "0" y eliminando las que estaban 
    completamente vacías. Una vez, solucionado esto. Me gustaría crear algunas columnas con diferentes 
    operaciones, para que la tabla sea mas funcional ,completa en su análisis y haré diferentes consultas
    para poder profundizar con mas exactitud en el dataset .
