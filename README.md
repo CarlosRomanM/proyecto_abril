@@ -38,7 +38,7 @@ Debido a la amplia gama de información que contenía el conjunto de datos origi
 
 - efficiency_data.csv
 - Food_Production.csv
-- Environment_Temperature_change_E_All_Data_NOFLAG.csv (pendiente de disponibilidad).
+- Environment_Temperature_change_E_All_Data_NOFLAG.csv
 - GCB2022v27_MtCO2_flat.csv
 
 
