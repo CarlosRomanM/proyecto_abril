@@ -90,7 +90,7 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
 4. Ejecuta los scripts o notebooks según sea necesario.
    
-Instrucciones para ejecutar el proyecto.
+5. Instrucciones para ejecutar el proyecto.
 
 ```markdown
    Ejecuta el archivo principal para procesar los datos:
