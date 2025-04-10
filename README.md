@@ -34,6 +34,7 @@ El proyecto está organizado en las siguientes etapas:
      
 5. **Dashboards**:
    - Gifs de los dashboards creados para el análisis de los datos.
+   - - Carpeta: `dashboards/`.
      
 
 
@@ -52,7 +53,7 @@ El proyecto está organizado en las siguientes etapas:
 
 ### Conclusiones:
 
-- Conclusiones individuales de las preguntas a resolver
+- Conclusiones individuales de cada una de las preguntas a resolver.
 - Conclusión Final.
 
 
