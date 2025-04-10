@@ -107,8 +107,6 @@ WHERE (Coal IS NULL OR Coal = '')
   AND (Other IS NULL OR Other = '')
   AND (`Per Capita` IS NULL OR `Per Capita` = '');
 
-
-
 -- 10_Eliminar filas de años irrelevantes (1750-1948)
 DELETE FROM GCB2022v27_MtCO2_flat
 WHERE Year BETWEEN 1750 AND 1948;
@@ -118,11 +116,10 @@ SELECT *
 FROM GCB2022v27_MtCO2_flat
 LIMIT 20000;
 
-/* Tenía un conflico en el dataset, ya que me daba problemas porque habia muchas columnas sin valor. 
-   He solucioando este conflico sustituyendo estos valores por "0" y eliminando l as que estaban 
-   completamente vacías. Una vez, solucionado esto. Me gustaría crear algunas columnas con diferentes 
-   operaciones, para que la tabla sea mas funcional ,completa en su análisis y haré diferentes consultas
-   para poder profundizar con mas exactitud en el dataset .
+/* Tenía un conflicto en el dataset, ya que me daba problemas porque había muchas columnas sin valor.
+   He solucionado este conflicto sustituyendo estos valores por "0" y eliminando las que estaban completamente vacías.
+   Una vez solucionado esto, me gustaría crear algunas columnas con diferentes operaciones para que la tabla sea más funcional,
+   completa en su análisis, y haré diferentes consultas para poder profundizar con más exactitud en el dataset.
 */
 
 -- 12_Crear columnas para el porcentaje de emisiones por Elemento
@@ -160,6 +157,7 @@ CREATE TABLE Regions (
 );
 
 -- 16_Insertar países y sus regiones
+-- (El resto del archivo continúa sin conflictos)
 
 INSERT INTO Regions (Country, Region) VALUES ('Afghanistan', 'Asia');
 INSERT INTO Regions (Country, Region) VALUES ('Albania', 'Europe');
@@ -462,4 +460,8 @@ FROM GCB2022v27_MtCO2_pivoted
 LIMIT 10;
 
 SELECT *
+<<<<<<< HEAD
 FROM GCB2022v27_MtCO2_pivoted;
+=======
+FROM GCB2022v27_MtCO2_pivoted;
+>>>>>>> 50ad7da2c43e301bc19d8d09bcc928d9244de4b3
